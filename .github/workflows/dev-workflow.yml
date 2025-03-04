@@ -2,7 +2,7 @@ name: Main workflow
 on:
   push:
     branches:
-      - "dev/**"
+      - "test-new/**"
   pull_request:
     branches:
       - main
