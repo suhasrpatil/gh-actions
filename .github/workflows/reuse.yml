@@ -1,4 +1,4 @@
-name: Reuse other workflow
+name: Reuse other workflow.
 
 on: [workflow_dispatch]
 jobs:
