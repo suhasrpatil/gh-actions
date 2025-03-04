@@ -64,5 +64,14 @@ jobs:
           path: .
       - name: Execute component test
         run: bash ci/component-test.sh
+  Performance-test:
+    runs-on: ubuntu-latest
+    needs: [Build, Docker-image]
+    steps:
+      - name: Download code
+        uses: actions/download-artifact@v4
+        with:
+          name: code
+          path: .
       - name: Execute component test
         run: bash ci/performance-test.sh
