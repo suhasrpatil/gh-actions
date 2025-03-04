@@ -64,3 +64,5 @@ jobs:
           path: .
       - name: Execute component test
         run: bash ci/component-test.sh
+      - name: Execute component test
+        run: bash ci/performance-test.sh
