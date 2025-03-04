@@ -38,7 +38,7 @@ jobs:
           DISABLE_ERRORS: true      
   Docker-image:
     runs-on: ubuntu-latest
-    needs: [Build, Linting]
+    needs: [Build]
     permissions:
       packages: write
     steps:
@@ -55,7 +55,7 @@ jobs:
       run: bash ci/push-docker.sh
   Component-test:
     runs-on: ubuntu-latest
-    needs: [Build, Linting, Docker-image]
+    needs: [Build, Docker-image]
     steps:
       - name: Execute component test
         run: bash ci/component-test.sh
